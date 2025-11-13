@@ -15,15 +15,15 @@ interface EducationCardProps {
 
 export function EducationCard({ education }: EducationCardProps) {
   return (
-    <Card>
+    <Card className="transition-smooth hover:shadow-md hover:bg-card/50 border-border/50">
       <CardHeader>
         <div className="flex justify-between items-start">
           <div>
-            <CardTitle>{education.institution}</CardTitle>
+            <CardTitle className="transition-colors hover:text-primary">{education.institution}</CardTitle>
             <CardDescription>{education.location}</CardDescription>
           </div>
           <div className="flex flex-col items-end">
-            <Badge>
+            <Badge className="transition-smooth hover:bg-primary/10">
               {education.startDate} - {education.endDate}
             </Badge>
             <span className="text-xs text-muted-foreground mt-1 mr-1">
@@ -41,12 +41,12 @@ export function EducationCard({ education }: EducationCardProps) {
         </div>
         {(education.coursework || education.subjects) && (
           <div>
-            <h4 className="font-medium">
+            <h4 className="font-medium mb-2">
               {education.coursework ? "Relevant Coursework" : "Relevant Subjects"}
             </h4>
             <ul className="grid grid-cols-1 md:grid-cols-2 gap-2 mt-2">
               {(education.coursework || education.subjects || []).map((item) => (
-                <li key={item} className="flex items-center gap-2">
+                <li key={item} className="flex items-center gap-2 transition-smooth hover:text-primary">
                   <BookOpen className="h-4 w-4 text-primary" />
                   <span>{item}</span>
                 </li>

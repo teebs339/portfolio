@@ -12,7 +12,7 @@ import type {
 export const personalInfo: PersonalInfo = {
     name: "Ateeb Shahid",
     title: "Automation Engineer | RPA / IPA Engineer",
-    bio: "Passionate about creating intuitive and impactful digital experiences. Interest and focused on Automation, Data Science, machine learning and AI. Open to Work & collaborate with forward thinking organizations in UAE.",
+    bio: "Passionate about creating intuitive and impactful digital experiences. Interested in Automation, Data Science, machine learning and AI. Open to Work & collaborate with forward thinking organizations in UAE.",
     location: "Dubai, UAE",
     education: "B.S. Computer Science",
     interests: [
@@ -22,7 +22,7 @@ export const personalInfo: PersonalInfo = {
         "AI",
         "LLMs",
     ],
-    resumeUrl: "https://drive.google.com/file/d/1nVSjdQVcGIQAtv2TtZajffxZmibRz8gm/view?usp=sharing",
+    resumeUrl: "https://drive.google.com/file/d/16ELo-OivObbguLH_iw4TJ-WyhABWbbBL/view?usp=sharing",
     profileImage: process.env.NODE_ENV === 'production' ? '/portfolio/new-pfp.png' : '/new-pfp.png',
 }
 
@@ -44,11 +44,9 @@ export const experiences: Experience[] = [
         description:
             "Delivered AI-driven RPA/IPA solutions as a freelancer for global clients across SAP MM, SD, and FI/CO processes. Built end-to-end automations using UiPath, Power Automate, Blue Prism, Automation Anywhere, n8n, Zapier, Make.com, Python, Node.js, REST APIs, and CRMs (Zoho, GHL, Salesforce, HubSpot). Earned Upwork Top Rated badge with 100% Job Success, completing 20+ projects with consistent 5-star reviews.",
         achievements: [
-            "Delivered tailored AI automation solutions for international clients across multiple industries, including SAP MM, SD and FI/CO processes.",
-            "Used RPA tools such as UiPath, Power Automate, Blue Prism, Automation Anywhere and web tools such as N8N, Zapier, Make.com, Retools to develop custom automated solutions.",
-            "Achieved Upwork Top Rated status with 100% Job Success and 5-star client reviews.",
-            "Completed 20+ projects for clients all over the world including US, UK, EU and Middle East.",
-            "Built bots and integrations using UiPath, Power Automate, Python (Selenium), Node.js (Puppeteer) and ML Model Qwen, Docker/Ollama, REST APIs and CRM platforms like Zoho, GoHighLevel (GHL), SalesForce and HubSpot.",
+            "Delivered 20+ AI-driven RPA/IPA solutions for global clients (US, UK, EU, Middle East) across SAP MM, SD, and FI/CO processes, achieving Upwork Top Rated status with 100% Job Success and consistent 5-star reviews.",
+            "Built end-to-end automations using RPA tools (UiPath, Power Automate, Blue Prism, Automation Anywhere) and web automation platforms (n8n, Zapier, Make.com, Retool) to streamline complex business workflows.",
+            "Developed intelligent bots and integrations combining Python (Selenium), Node.js (Puppeteer), ML models (Qwen), Docker/Ollama, REST APIs, and CRM platforms (Zoho, GoHighLevel, Salesforce, HubSpot) for scalable automation solutions.",
         ],
         tools: [
             "UiPath",
@@ -66,22 +64,18 @@ export const experiences: Experience[] = [
         id: "sybros-lead-dev",
         title: "Lead RPA/IPA Developer",
         company: "Sybros Tech",
-        location: "Lahore, Pakistan (On-site)",
+        location: "On-site, Lahore, Pakistan",
         startDate: "Oct 2023",
         endDate: "Jan 2025",
         duration: "15 months",
         description:
             "At Sybros Tech, a technology consulting firm specializing in Robotic Process Automation (RPA) and Intelligent Process Automation (IPA), I led the RPA team in designing and deploying automation solutions across SAP Fiori and HANA, streamlining finance, procurement, and sales operations. Oversaw developer training, guided project execution, and represented Sybros Tech as a speaker in university workshops. Delivered scalable automations using UiPath, Power Automate, Python, and API integrations, showcasing the company's leadership in enterprise automation.",
         achievements: [
-            "Experienced in SAP Fiori and SAP HANA environments, including data extraction, reporting, and process automation.",
-            "Led a team of 5 developers to deliver high-quality automation projects across all modules.",
-            "Received a LinkedIn recommendation from the CEO of SybrosTech, recognizing professionalism, problem-solving, teamwork, and reliability.",
-            "Designed and implemented end-to-end RPA solutions using UiPath, Power Automate, Python, and API integrations for SAP and non-SAP systems.",
-            "Conducted process analysis, data mining, and workflow optimization leveraging SAP HANA's real-time processing capabilities.",
-            "Automated SAP HANA data queries and reporting for finance, procurement, and sales operations, reducing manual effort and errors.",
-            "Managed full project lifecycle, ensuring timely delivery and adherence to quality standards.",
-            "Experienced with tools and platforms: Postman, Node.js (Puppeteer), Python (Selenium), Google Apps Script, Salesforce, HubSpot, Zapier, Make.com, n8n, MongoDB.",
-            "Trained and mentored junior developers and conducted university workshops on RPA, automation, and SAP process integration.",
+            "Led the RPA team to deliver enterprise automation solutions across SAP Fiori and HANA, automating finance, procurement, and sales operations with real-time data extraction, reporting, and workflow optimization.",
+            "Designed and implemented end-to-end RPA/IPA solutions using UiPath, Power Automate, Python, Node.js (Puppeteer), and API integrations for both SAP and non-SAP systems, reducing manual effort and errors significantly.",
+            "Managed full project lifecycle from process analysis to deployment, ensuring timely delivery and quality standards while leveraging SAP HANA's real-time processing capabilities for data mining and optimization.",
+            "Trained and mentored junior developers, conducted university workshops on RPA and automation, and represented Sybros Tech as a speaker, earning a formal recommendation letter from the CEO recognizing leadership, technical excellence, and professionalism.",
+            "Experienced with diverse automation tools and platforms including Postman, Google Apps Script, Salesforce, HubSpot, Zapier, Make.com, n8n, and MongoDB for comprehensive automation solutions.",
         ],
         tools: [
             "UiPath/Orchestrator",
@@ -96,6 +90,25 @@ export const experiences: Experience[] = [
             "n8n",
         ],
         languages: ["Python", "JavaScript", "VB.NET", "SQL", "PHP"],
+        recommendationLetterUrl: "https://drive.google.com/file/d/1WNQjBqon14Xk6qgpfdOJw9HBeVa9nRSm/view?usp=sharing",
+    },
+    {
+        id: "samsung-ai-trainee",
+        title: "Artificial Intelligence Trainee",
+        company: "Samsung Innovation Campus",
+        location: "On-site, Lahore, Pakistan",
+        startDate: "Sep 2022",
+        endDate: "Dec 2022",
+        duration: "4 months",
+        description:
+            "Completed comprehensive AI training program covering machine learning fundamentals, data preprocessing, and practical application of supervised, unsupervised, and NLP techniques. Developed predictive models for healthcare applications.",
+        achievements: [
+            "Solid grounding in machine learning fundamentals (linear algebra, probability, statistics) with hands-on experience in data preprocessing and analysis using Python (NumPy, Pandas).",
+            "Practical application of supervised, unsupervised, and NLP techniques to extract insights from both structured and unstructured datasets.",
+            "Learned and developed predictive model for detecting Cytokine protein levels in blood samples to support early identification of inflammation-related conditions.",
+        ],
+        tools: ["Python", "NumPy", "Pandas", "Machine Learning", "NLP"],
+        languages: ["Python"],
     },
 ]
 
@@ -204,9 +217,17 @@ export const achievements: Achievement[] = [
         title: "RPA Team Lead",
         organization: "Sybros Tech, Lahore",
         description:
-            "Led the RPA team to deliver enterprise automations across SAP platforms, optimizing workflows and boosting efficiency. Mentored developers and earned a formal LinkedIn recommendation from the CEO for leadership and technical excellence.",
-        link: "https://www.linkedin.com/in/ateeb-shahid/",
-        linkText: "LinkedIn Profile",
+            "Led the RPA team to deliver enterprise automations across SAP platforms, optimizing workflows and boosting efficiency. Mentored developers and earned a formal recommendation letter from the CEO recognizing leadership, technical excellence, professionalism, problem-solving, teamwork, and reliability.",
+        links: [
+            {
+                url: "https://www.linkedin.com/in/ateeb-shahid/",
+                text: "LinkedIn Profile",
+            },
+            {
+                url: "https://drive.google.com/file/d/1WNQjBqon14Xk6qgpfdOJw9HBeVa9nRSm/view?usp=sharing",
+                text: "View Recommendation Letter",
+            },
+        ],
     },
     {
         id: "top-rated-freelancer",

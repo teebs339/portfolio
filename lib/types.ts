@@ -20,6 +20,7 @@ export interface Experience {
   achievements: string[]
   tools: string[]
   languages: string[]
+  recommendationLetterUrl?: string
 }
 
 export interface Education {

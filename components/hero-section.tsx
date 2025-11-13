@@ -34,13 +34,13 @@ export function HeroSection({ personalInfo, contactInfo }: HeroSectionProps) {
                     )}
                 </p>
                 <div className="flex gap-4 pt-4">
-                    <Button asChild>
+                    <Button asChild className="transition-smooth hover:scale-105">
                         <a href="#contact">Get in touch</a>
                     </Button>
-                    <Button variant="outline" asChild>
+                    <Button variant="outline" asChild className="transition-smooth hover:bg-primary hover:text-primary-foreground hover:scale-105">
                         <a href="#projects">View projects</a>
                     </Button>
-                    <Button variant="outline" asChild>
+                    <Button variant="outline" asChild className="transition-smooth hover:bg-primary hover:text-primary-foreground hover:scale-105">
                         <a
                             href={personalInfo.resumeUrl}
                             target="_blank"
@@ -53,7 +53,7 @@ export function HeroSection({ personalInfo, contactInfo }: HeroSectionProps) {
 
                 <div className="flex gap-4 pt-2">
                     {contactInfo.socialLinks.linkedin && (
-                        <Button variant="outline" asChild>
+                        <Button variant="outline" asChild className="transition-smooth hover:bg-primary hover:text-primary-foreground hover:scale-105">
                             <a
                                 href={contactInfo.socialLinks.linkedin}
                                 target="_blank"
@@ -67,7 +67,7 @@ export function HeroSection({ personalInfo, contactInfo }: HeroSectionProps) {
                     )}
 
                     {contactInfo.socialLinks.github && (
-                        <Button variant="outline" asChild>
+                        <Button variant="outline" asChild className="transition-smooth hover:bg-primary hover:text-primary-foreground hover:scale-105">
                             <a
                                 href={contactInfo.socialLinks.github}
                                 target="_blank"
@@ -81,12 +81,12 @@ export function HeroSection({ personalInfo, contactInfo }: HeroSectionProps) {
                     )}
                 </div>
             </div>
-            <div className="relative w-48 h-48 md:w-64 md:h-64 rounded-full overflow-hidden border-4 border-background shadow-xl">
+            <div className="relative w-48 h-48 md:w-64 md:h-64 rounded-full overflow-hidden border-4 border-background shadow-xl transition-smooth hover:shadow-2xl hover:scale-105 ring-4 ring-primary/10">
                 <Image
                     src={personalInfo.profileImage}
                     alt={personalInfo.name}
                     fill
-                    className="object-cover"
+                    className="object-cover transition-smooth hover:scale-110"
                     priority
                 />
             </div>
