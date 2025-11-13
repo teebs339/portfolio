@@ -50,11 +50,14 @@ export function NeuralBackground() {
     const resizeCanvas = () => {
       canvas.width = window.innerWidth
       // Use document height instead of window height so it scrolls with content
-      canvas.height = Math.max(
+      const newHeight = Math.max(
         document.documentElement.scrollHeight,
         document.documentElement.clientHeight,
         window.innerHeight
       )
+      canvas.height = newHeight
+      // Set CSS height to match canvas height
+      canvas.style.height = `${newHeight}px`
       // Reinitialize points on resize
       const pointCount = Math.floor((canvas.width * canvas.height) / 15000)
       pointsRef.current = Array.from({ length: pointCount }, () => ({
@@ -75,6 +78,7 @@ export function NeuralBackground() {
       )
       if (canvas.height !== newHeight) {
         canvas.height = newHeight
+        canvas.style.height = `${newHeight}px`
         // Redistribute points if canvas got taller
         const currentPoints = pointsRef.current.length
         const expectedPoints = Math.floor((canvas.width * canvas.height) / 15000)
@@ -121,7 +125,7 @@ export function NeuralBackground() {
       const maxDistance = 150
       const primaryColor = getPrimaryColor() // Get color dynamically each frame
 
-      // Update canvas height dynamically
+      // Update canvas height dynamically to match document height
       const currentHeight = Math.max(
         document.documentElement.scrollHeight,
         document.documentElement.clientHeight,
@@ -129,6 +133,12 @@ export function NeuralBackground() {
       )
       if (canvas.height !== currentHeight) {
         canvas.height = currentHeight
+        canvas.style.height = `${currentHeight}px`
+      }
+      // Also update canvas width on each frame to handle window resizing
+      if (canvas.width !== window.innerWidth) {
+        canvas.width = window.innerWidth
+        canvas.style.width = `${window.innerWidth}px`
       }
 
       // Update points - always animating
@@ -277,8 +287,8 @@ export function NeuralBackground() {
   return (
     <canvas
       ref={canvasRef}
-      className="absolute top-0 left-0 pointer-events-none z-0 w-full"
-      style={{ mixBlendMode: blendMode, opacity: opacity, height: "100%" }}
+      className="absolute top-0 left-0 pointer-events-none z-0"
+      style={{ mixBlendMode: blendMode, opacity: opacity, width: "100%" }}
     />
   )
 }
