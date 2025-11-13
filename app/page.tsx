@@ -422,14 +422,14 @@ export default function Home() {
                 <h3 className="text-lg font-semibold mb-4">Connect with me</h3>
                 <div className="flex gap-4">
                   {contactInfo.socialLinks.linkedin && (
-                    <Button variant="outline" size="icon" asChild className="glass-card dark:glass-card-dark hover:scale-110 transition-smooth hover:bg-primary hover:text-primary-foreground">
+                    <Button variant="outline" size="icon" asChild className="glass-card dark:glass-card-dark hover:scale-110 transition-smooth hover:bg-primary hover:text-primary-foreground hover:border-primary">
                       <a href={contactInfo.socialLinks.linkedin} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
                         <Linkedin className="h-5 w-5" />
                       </a>
                     </Button>
                   )}
                   {contactInfo.socialLinks.github && (
-                    <Button variant="outline" size="icon" asChild className="glass-card dark:glass-card-dark hover:scale-110 transition-smooth hover:bg-primary hover:text-primary-foreground">
+                    <Button variant="outline" size="icon" asChild className="glass-card dark:glass-card-dark hover:scale-110 transition-smooth hover:bg-primary hover:text-primary-foreground hover:border-primary">
                       <a href={contactInfo.socialLinks.github} target="_blank" rel="noopener noreferrer" aria-label="GitHub">
                         <Github className="h-5 w-5" />
                       </a>
