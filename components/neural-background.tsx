@@ -37,7 +37,7 @@ export function NeuralBackground() {
   const canvasRef = useRef<HTMLCanvasElement>(null)
   const mousePosRef = useRef({ x: 0, y: 0 })
   const pointsRef = useRef<Point[]>([])
-  const animationFrameRef = useRef<number>()
+  const animationFrameRef = useRef<number | undefined>(undefined)
 
   useEffect(() => {
     const canvas = canvasRef.current
@@ -251,13 +251,13 @@ export function NeuralBackground() {
     }
   }, [])
 
-  const [blendMode, setBlendMode] = useState("screen")
+  const [blendMode, setBlendMode] = useState<React.CSSProperties["mixBlendMode"]>("screen")
   const [opacity, setOpacity] = useState(0.8)
 
   useEffect(() => {
     // Update blend mode and opacity based on theme
     const updateTheme = () => {
-      setBlendMode(getBlendMode())
+      setBlendMode(getBlendMode() as React.CSSProperties["mixBlendMode"])
       setOpacity(getOpacity())
     }
 
