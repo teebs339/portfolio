@@ -22,7 +22,7 @@ export const personalInfo: PersonalInfo = {
         "AI",
         "LLMs",
     ],
-    resumeUrl: "https://drive.google.com/file/d/10k-5nxQFVvnNyvWGQAkk-60ZMI-D3kfM/view?usp=sharing",
+    resumeUrl: "https://drive.google.com/file/d/1uzS84N2kDwzRHC6xxsDph-98o-8VL_O5/view?usp=sharing",
     profileImage: process.env.NODE_ENV === 'production' ? '/portfolio/new-pfp.png' : '/new-pfp.png',
 }
 
