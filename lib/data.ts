@@ -34,36 +34,36 @@ export const aboutSections = [
 
 export const experiences: Experience[] = [
     {
-        id: "upwork-ai-engineer",
-        title: "AI Automation Engineer",
-        company: "Upwork",
+        id: "duofankaar-automation-engineer",
+        title: "Automation Specialist",
+        company: "DuoFankaar | Full Time",
         location: "Hybrid",
-        startDate: "Jan 2025",
-        endDate: "Aug 2025",
-        duration: "8 months",
+        startDate: "Dec 2024",
+        endDate: "Oct 2025",
+        duration: "10 months",
         description:
-            "Delivered AI-driven RPA/IPA solutions as a freelancer for global clients across SAP MM, SD, and FI/CO processes. Built end-to-end automations using UiPath, Power Automate, Blue Prism, Automation Anywhere, n8n, Zapier, Make.com, Python, Node.js, REST APIs, and CRMs (Zoho, GHL, Salesforce, HubSpot). Earned Upwork Top Rated badge with 100% Job Success, completing 20+ projects with consistent 5-star reviews.",
+            "At DuoFankaar, I designed and deployed end-to-end automation systems with a strong focus on n8n, JavaScript, and machine learning to optimize workflows and integrate business processes. I led API-driven automations, AI-powered workflows, and custom pipelines for enterprise CRMs including GoHighLevel, Salesforce, HubSpot, Zoho, and Pipedrive.",
         achievements: [
-            "Delivered 20+ AI-driven RPA/IPA solutions for global clients (US, UK, EU, Middle East) across SAP MM, SD, and FI/CO processes, achieving Upwork Top Rated status with 100% Job Success and consistent 5-star reviews.",
-            "Built end-to-end automations using RPA tools (UiPath, Power Automate, Blue Prism, Automation Anywhere) and web automation platforms (n8n, Zapier, Make.com, Retool) to streamline complex business workflows.",
-            "Developed intelligent bots and integrations combining Python (Selenium), Node.js (Puppeteer), ML models (Qwen), Docker/Ollama, REST APIs, and CRM platforms (Zoho, GoHighLevel, Salesforce, HubSpot) for scalable automation solutions.",
+            "Built and maintained AI-driven workflows using n8n, JavaScript, Python, and ML models to handle complex, unstructured data.",
+            "Designed enterprise automation solutions integrating multiple CRMs, APIs, and third-party platforms.",
+            "Implemented RPA and web/API automations using UiPath, Power Automate, Node.js, Docker, and REST APIs to reduce manual workload and errors.",
         ],
         tools: [
-            "UiPath",
-            "Automation Anywhere",
-            "Power Automate",
-            "Selenium",
-            "Puppeteer",
-            "n8n",
-            "Make.com",
-            "Zapier",
+            "n8n, Make.com, Zapier, Retool",
+            "UiPath, Power Automate",
+            "Google Cloud Platform",
+            "Docker / Ollama",
+            "Shopify, WordPress APIs",
+            "GHL, Salesforce, HubSpot, Zoho, Pipedrive",
+            "Web scraping (Selenium, Puppeteer)",
+            "AI/ML (VAPI, ElevenLabs, ML models)",
         ],
-        languages: ["Python", "JavaScript", "VB.NET", "SQL"],
+        languages: ["JavaScript / Node.js", "Python", "VB.NET", "PHP", "SQL / NoSQL"],
     },
     {
         id: "sybros-lead-dev",
         title: "Lead RPA/IPA Developer",
-        company: "Sybros Tech",
+        company: "Sybros Tech | Full Time",
         location: "On-site, Lahore, Pakistan",
         startDate: "Oct 2023",
         endDate: "Jan 2025",
@@ -95,7 +95,7 @@ export const experiences: Experience[] = [
     {
         id: "samsung-ai-trainee",
         title: "Artificial Intelligence Trainee",
-        company: "Samsung Innovation Campus",
+        company: "Samsung Innovation Campus | Part Time",
         location: "On-site, Lahore, Pakistan",
         startDate: "Sep 2022",
         endDate: "Dec 2022",
@@ -161,9 +161,9 @@ export const projects: Project[] = [
     },
     {
         id: "wedding-planner-pdf",
-        title: "Wedding Planner PDF Generator",
+        title: "Event Planner PDF Generator",
         description:
-            "n8n workflow integrating APIs of Google Sheets, Slides, and Gmail to generate and deliver wedding planner PDFs. Uses GPT-5 Model for data structuring JSON and JavaScript nodes for formatting the JSON within n8n before automated export and email delivery.",
+            "n8n workflow integrating APIs of Google Sheets, Slides, and Gmail to generate and deliver event planner PDFs. Uses GPT-5 Model for data structuring JSON and JavaScript nodes for formatting the JSON within n8n before automated export and email delivery.",
         image: process.env.NODE_ENV === 'production' ? '/portfolio/wedding-planner-n8n-new-new.png' : '/wedding-planner-n8n-new-new.png',
         technologies: [
             "n8n",
@@ -231,12 +231,10 @@ export const achievements: Achievement[] = [
     },
     {
         id: "top-rated-freelancer",
-        title: "Top Rated Freelancer",
-        organization: "Upwork",
+        title: "RPA Experience in the UAE",
+        organization: "UAE",
         description:
-            "Delivered 20+ AI-driven automation projects globally using RPA/IPA, web automation, Python/Node.js, ML models, Docker, and CRMs. Achieved Top Rated freelancer badge in no time with 100% Job Success Score.",
-        link: "https://www.upwork.com/freelancers/~018029074a06d605ab",
-        linkText: "Upwork Profile",
+            "Led AI-driven automation projects at across the UAE using RPA, n8n, Python, Node.js, machine learning models, Docker, and CRM integrations. Delivered enterprise-grade solutions that optimized workflows, reduced manual effort, and improved operational efficiency for clients in multiple sectors.",
     },
     {
         id: "rpa-workshop",

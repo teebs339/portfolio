@@ -156,20 +156,6 @@ export function NeuralBackground() {
           point.vy += (Math.random() - 0.5) * 0.3
         }
 
-        // Attract to mouse when detected (mousePos is not at origin)
-        if (mousePos.x > 0 && mousePos.y > 0) {
-          const dx = mousePos.x - point.x
-          const dy = mousePos.y - point.y
-          const distance = Math.sqrt(dx * dx + dy * dy)
-          const maxInfluence = 250
-
-          if (distance < maxInfluence && distance > 0) {
-            const force = (1 - distance / maxInfluence) * 0.03
-            point.vx += (dx / distance) * force
-            point.vy += (dy / distance) * force
-          }
-        }
-
         // Update position
         point.x += point.vx
         point.y += point.vy
