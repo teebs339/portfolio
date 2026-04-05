@@ -106,12 +106,12 @@ export function NeuralBackground() {
       attributes: true,
     })
 
-    // Mouse tracking - update ref directly for better performance
-    // Account for scroll position
+    // Mouse tracking - use coordinates relative to canvas position
     const handleMouseMove = (e: MouseEvent) => {
+      const rect = canvas.getBoundingClientRect()
       mousePosRef.current = {
-        x: e.clientX,
-        y: e.clientY + window.scrollY
+        x: e.clientX - rect.left,
+        y: e.clientY - rect.top + window.scrollY
       }
     }
     window.addEventListener("mousemove", handleMouseMove)

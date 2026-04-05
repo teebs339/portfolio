@@ -2,6 +2,7 @@ import type React from "react"
 import "@/app/globals.css"
 import { Inter } from "next/font/google"
 import { ThemeProvider } from "@/components/theme-provider"
+import { SiteHeader } from "@/components/site-header"
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -9,19 +10,24 @@ const inter = Inter({ subsets: ["latin"] })
 const basePath = process.env.NODE_ENV === 'production' ? '/portfolio' : ''
 
 export const metadata = {
-  title: "Ateeb Shahid | Automation Engineer | RPA/IPA Engineer",
+  title: "Ateeb Shahid - Automation Engineer | n8n, RPA, React",
   description:
-    "Automation and Machine Learning Engineer specializing in RPA, IPA, and intelligent automation. Expert in UiPath, Power Automate, Python, and Node.js. Open to work in UAE.",
+    "AI Automation Engieer with 3+ years building production-grade automation systems using n8n, UiPath, React, and Python. Specializing in enterprise RPA, CRM integrations, and AI/ML workflows. Based in Dubai, UAE.",
   keywords: [
-    "Automation Engineer",
-    "RPA Engineer",
-    "IPA Engineer",
-    "UiPath",
+    "AI Automation Engineer",
+    "Software Engineer",
+    "RPA Developer",
+    "n8n Expert",
+    "UiPath Developer",
     "Power Automate",
-    "Python",
+    "React Developer",
+    "Python Automation",
+    "CRM Integration",
+    "Enterprise Automation",
     "Machine Learning",
-    "AI Automation",
     "Process Automation",
+    "Dubai UAE",
+    "Workflow Automation",
   ],
   authors: [{ name: "Ateeb Shahid" }],
   creator: "Ateeb Shahid",
@@ -29,16 +35,16 @@ export const metadata = {
     type: "website",
     locale: "en_US",
     url: "https://ateebshahid.com",
-    title: "Ateeb Shahid | Automation Engineer",
+    title: "Ateeb Shahid | AI Automation Engieer",
     description:
-      "Automation and Machine Learning Engineer specializing in RPA, IPA, and intelligent automation.",
+      "Building production-grade automation systems with n8n, UiPath, React, and Python. Enterprise RPA, CRM integrations, and AI/ML workflows.",
     siteName: "Ateeb Shahid Portfolio",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Ateeb Shahid | Automation Engineer",
+    title: "Ateeb Shahid | AI Automation Engieer",
     description:
-      "Automation and Machine Learning Engineer specializing in RPA, IPA, and intelligent automation.",
+      "Building production-grade automation systems with n8n, UiPath, React, and Python. Enterprise RPA, CRM integrations, and AI/ML workflows.",
   },
   icons: {
     icon: [
@@ -62,6 +68,7 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body className={inter.className}>
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem={false} disableTransitionOnChange>
+          <SiteHeader />
           {children}
         </ThemeProvider>
       </body>

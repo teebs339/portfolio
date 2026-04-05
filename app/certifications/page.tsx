@@ -1,11 +1,9 @@
 import Link from "next/link"
-import { ModeToggle } from "@/components/mode-toggle"
 import { Button } from "@/components/ui/button"
 import { ArrowLeft, FileText, ExternalLink } from "lucide-react"
 import { Badge } from "@/components/ui/badge"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+import { CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { certifications } from "@/lib/data"
-import { personalInfo } from "@/lib/data"
 
 export default function CertificationsPage() {
   return (
@@ -14,35 +12,6 @@ export default function CertificationsPage() {
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute bottom-20 right-10 w-96 h-96 bg-primary/5 rounded-full blur-3xl animate-float" />
       </div>
-
-      {/* Header */}
-      <header className="sticky top-0 z-50 w-full border-b border-border/20 bg-background/40 backdrop-blur-xl supports-[backdrop-filter]:bg-background/20">
-        <div className="container flex h-16 items-center justify-between">
-          <Link href="/" className="text-xl font-bold hover:text-primary transition-colors">
-            {personalInfo.name}
-          </Link>
-          <div className="flex items-center gap-4">
-            <nav className="hidden md:flex items-center gap-1">
-              <Link href="/experience" className="px-4 py-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-smooth rounded-md hover:bg-muted/50">
-                Experience
-              </Link>
-              <Link href="/projects" className="px-4 py-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-smooth rounded-md hover:bg-muted/50">
-                Projects
-              </Link>
-              <Link href="/achievements" className="px-4 py-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-smooth rounded-md hover:bg-muted/50">
-                Achievements
-              </Link>
-              <Link href="/certifications" className="px-4 py-2 text-sm font-medium text-primary bg-primary/10 rounded-md">
-                Certifications
-              </Link>
-              <Link href="/education" className="px-4 py-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-smooth rounded-md hover:bg-muted/50">
-                Education
-              </Link>
-            </nav>
-            <ModeToggle />
-          </div>
-        </div>
-      </header>
 
       <main className="container relative z-10 py-12">
         <Button variant="ghost" asChild className="mb-8">

@@ -1,10 +1,8 @@
 import Link from "next/link"
-import { ModeToggle } from "@/components/mode-toggle"
 import { Button } from "@/components/ui/button"
 import { ArrowLeft, Award, ExternalLink, FileText } from "lucide-react"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+import { CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { achievements } from "@/lib/data"
-import { personalInfo } from "@/lib/data"
 
 export default function AchievementsPage() {
   return (
@@ -14,32 +12,6 @@ export default function AchievementsPage() {
         <div className="absolute top-20 left-10 w-96 h-96 bg-primary/10 rounded-full blur-3xl animate-float" />
         <div className="absolute bottom-20 right-10 w-72 h-72 bg-primary/5 rounded-full blur-3xl animate-float" style={{ animationDelay: '2s' }} />
       </div>
-
-      {/* Header */}
-      <header className="sticky top-0 z-50 w-full border-b border-border/20 bg-background/40 backdrop-blur-xl supports-[backdrop-filter]:bg-background/20">
-        <div className="container flex h-16 items-center justify-between">
-          <Link href="/" className="text-xl font-bold hover:text-primary transition-colors">
-            {personalInfo.name}
-          </Link>
-          <div className="flex items-center gap-4">
-            <nav className="hidden md:flex items-center gap-1">
-              <Link href="/experience" className="px-4 py-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-smooth rounded-md hover:bg-muted/50">
-                Experience
-              </Link>
-              <Link href="/projects" className="px-4 py-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-smooth rounded-md hover:bg-muted/50">
-                Projects
-              </Link>
-              <Link href="/certifications" className="px-4 py-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-smooth rounded-md hover:bg-muted/50">
-                Certifications
-              </Link>
-              <Link href="/education" className="px-4 py-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-smooth rounded-md hover:bg-muted/50">
-                Education
-              </Link>
-            </nav>
-            <ModeToggle />
-          </div>
-        </div>
-      </header>
 
       <main className="container relative z-10 py-12">
         <Button variant="ghost" asChild className="mb-8">
@@ -66,7 +38,15 @@ export default function AchievementsPage() {
                   <CardDescription>{achievement.organization}</CardDescription>
                 </CardHeader>
                 <CardContent className="p-0 flex-grow flex flex-col justify-between">
-                  <p className="text-muted-foreground leading-relaxed mb-4">{achievement.description}</p>
+                  <p className="text-muted-foreground leading-relaxed mb-4">
+                    {achievement.description.split(/(\*\*.*?\*\*)/).map((part, i) =>
+                      part.startsWith("**") && part.endsWith("**") ? (
+                        <span key={i} className="font-semibold text-foreground">{part.slice(2, -2)}</span>
+                      ) : (
+                        <span key={i}>{part}</span>
+                      )
+                    )}
+                  </p>
                   <div className="flex flex-wrap gap-2">
                     {achievement.link && (
                       <Button size="sm" variant="outline" asChild className="transition-smooth hover:bg-primary hover:text-primary-foreground">
