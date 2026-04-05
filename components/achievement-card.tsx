@@ -21,7 +21,15 @@ export function AchievementCard({ achievement }: AchievementCardProps) {
         <CardDescription>{achievement.organization}</CardDescription>
       </CardHeader>
       <CardContent>
-        <p className="text-muted-foreground leading-relaxed">{achievement.description}</p>
+        <p className="text-muted-foreground leading-relaxed">
+          {achievement.description.split(/(\*\*.*?\*\*)/).map((part, i) =>
+            part.startsWith("**") && part.endsWith("**") ? (
+              <span key={i} className="font-semibold text-foreground">{part.slice(2, -2)}</span>
+            ) : (
+              <span key={i}>{part}</span>
+            )
+          )}
+        </p>
 
         <div className="flex flex-wrap gap-2 mt-4">
           {achievement.link && (

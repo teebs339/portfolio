@@ -11,32 +11,32 @@ import type {
 
 export const personalInfo: PersonalInfo = {
     name: "Ateeb Shahid",
-    title: "AI Automation | Software Engineer",
-    bio: "Automation specialist and Software engineer with 3 years of experience building React based front ends and n8n driven back ends using JavaScript, Node.js, and Python. Strong RPA background with UiPath and Power Automate, plus deep CRM and enterprise integrations. Skilled in AI and ML workflows for automating complex, unstructured processes. Based in the UAE with relocation flexibility.",
+    title: "Professional AI Automation Engineer",
+    bio: "Automation specialist and Software engineer with 3+ years of experience building React-based front ends and n8n-driven back ends using JavaScript, Node.js, and Python. Strong RPA background with UiPath and Power Automate, plus deep CRM and enterprise integrations. Skilled in AI and ML workflows for automating complex, unstructured processes. Based in the UAE with relocation flexibility.",
     location: "Dubai, United Arab Emirates",
     education: "BSCS (Honors) Computer Science",
     interests: [
-        "Intelligent Automation",
+        "Intelligent Process Automation",
         "React & TypeScript",
-        "n8n & RPA",
-        "AI & ML Workflows",
+        "n8n & RPA Workflows",
+        "AI/ML Pipelines",
         "Enterprise CRM Integrations",
     ],
     resumeUrl: "https://drive.google.com/file/d/1c-gEoW7NgJ5IZSXaG-TscRB9WBWf-wRR/view?usp=sharing",
-    profileImage: process.env.NODE_ENV === 'production' ? '/portfolio/new-pfp.png' : '/new-pfp.png',
+    profileImage: process.env.NODE_ENV === 'production' ? '/portfolio/pfp.jpeg' : '/pfp.jpeg',
 }
 
 export const aboutSections = [
-    "I'm an Automation specialist and Software engineer with 3 years of experience building React-based front ends and n8n-driven back ends using JavaScript, Node.js, and Python. I have a strong RPA background with UiPath and Power Automate, plus deep CRM and enterprise integrations. I'm skilled in AI and ML workflows for automating complex, unstructured processes and am based in the UAE with relocation flexibility.",
-    "I've delivered production-grade automation and software projects through Upwork (Top Rated), developed React.js TypeScript front ends and complex automation workflows using n8n, UiPath, and Make.com, and implemented enterprise CRM and AI-driven integrations across GoHighLevel, HubSpot, Zoho, Salesforce, and Pipedrive.",
-    "When I'm not coding, you can find me in the gym, at the swimming pool, pulling strings on a guitar, or exploring new tech and automation tools.",
+    "I architect and deploy end-to-end automation systems that eliminate manual bottlenecks and scale business operations. With 3+ years of hands-on experience spanning React front ends, n8n-driven back ends, and enterprise RPA using UiPath and Power Automate, I build the infrastructure that lets teams focus on what matters while machines handle the rest.",
+    "From Upwork (Top Rated) to on-site enterprise roles in the UAE, I've delivered production-grade workflows integrating CRMs like Salesforce, HubSpot, and Zoho with AI-powered pipelines using OpenAI, Docker, and custom LLM integrations. I've led RPA teams, managed full project lifecycles, and trained developers across SAP, finance, and procurement domains.",
+    "When I'm not automating workflows, you can find me in the gym, at the swimming pool, pulling strings on a guitar, or exploring new tech and automation tools.",
 ]
 
 export const experiences: Experience[] = [
     {
         id: "1xl-n8n-automation-expert",
         title: "n8n Automation Expert",
-        company: "1XL Infra & Real Estate Development LLC | Full Time",
+        company: "1XL Infra & Real Estate Development LLC",
         location: "Burj Khalifa, Dubai, UAE",
         startDate: "Dec 2025",
         endDate: "Present",
@@ -59,8 +59,8 @@ export const experiences: Experience[] = [
     {
         id: "upwork-software-ai-automation",
         title: "Software & AI Automation Engineer",
-        company: "Upwork | Full Time",
-        location: "Remote",
+        company: "Upwork (Top Rated)",
+        location: "Remote - Full Time",
         startDate: "Jan 2025",
         endDate: "Dec 2025",
         duration: "12 months",
@@ -88,13 +88,13 @@ export const experiences: Experience[] = [
     {
         id: "sybros-lead-dev",
         title: "Lead RPA Developer",
-        company: "Sybros Tech | Full Time",
-        location: "On-site, Lahore, Pakistan",
+        company: "SYBROS TECH",
+        location: "Lahore, Pakistan (On-Site - Full Time)",
         startDate: "Oct 2023",
         endDate: "Jan 2025",
         duration: "15 months",
         description:
-            "Position of RPA Team Lead delivering enterprise-grade automations across SAP and non-SAP systems using UiPath, Power Automate, Python, and APIs that eliminated manual work and stabilized core finance and procurement workflows.",
+            "Position of RPA Team Lead and presented enterprise-grade automations across SAP and non-SAP systems using UiPath, Power Automate, Python, and APIs that wiped out manual work and stabilized core finance and procurement workflows.",
         achievements: [
             "Led RPA team, delivering end-to-end automations for SAP Fiori/HANA and CRMs using UiPath, Python, and APIs.",
             "Built workflows that eliminated manual bottlenecks in finance, procurement, and sales, reducing errors and saving hours.",
@@ -113,8 +113,8 @@ export const experiences: Experience[] = [
     {
         id: "samsung-ai-intern",
         title: "Artificial Intelligence Intern",
-        company: "Samsung Innovation Campus | Part Time",
-        location: "On-site, Lahore, Pakistan",
+        company: "SAMSUNG INNOVATION CAMPUS",
+        location: "Lahore, Pakistan (On-Site - Part Time)",
         startDate: "Sep 2022",
         endDate: "Dec 2023",
         duration: "4 months",
@@ -252,9 +252,9 @@ export const achievements: Achievement[] = [
     {
         id: "uae-work-experience",
         title: "UAE Work Experience",
-        organization: "DuoFankaar",
+        organization: "1XL Infra & Real Estate Development LLC",
         description:
-            "Led AI-driven automation and software projects across the UAE using RPA, n8n, Python, Node.js, machine learning models, Docker, and CRM integrations. Delivered enterprise-grade solutions that optimized workflows, reduced manual effort, and improved operational efficiency for clients in multiple sectors.",
+            "Led AI-driven automation and software projects across the UAE, operating out of **Burj Khalifa, Dubai**. Built enterprise-grade solutions using RPA, n8n, Python, Node.js, machine learning models, Docker, and CRM integrations that optimized workflows, reduced manual effort, and improved operational efficiency for clients in multiple sectors.",
     },
 ]
 

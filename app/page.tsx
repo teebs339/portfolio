@@ -1,8 +1,8 @@
 import Link from "next/link"
 import Image from "next/image"
-import { ModeToggle } from "@/components/mode-toggle"
+
 import { Button } from "@/components/ui/button"
-import { ArrowRight, Briefcase, Code, Mail, Github, Linkedin, Download, Award, FileText, Wrench, MapPin, GraduationCap, MessageSquare, Phone } from "lucide-react"
+import { ArrowRight, Briefcase, Code, Mail, Github, Linkedin, Download, Award, FileText, Wrench, MapPin, GraduationCap, MessageSquare, Phone, Zap, Bot, Workflow } from "lucide-react"
 import { Badge } from "@/components/ui/badge"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
@@ -19,35 +19,6 @@ export default function Home() {
       {/* Interactive Neural Background */}
       <NeuralBackground />
 
-
-      {/* Header */}
-      <header className="sticky top-0 z-50 w-full border-b border-border/20 bg-background/40 backdrop-blur-xl supports-[backdrop-filter]:bg-background/20">
-        <div className="container flex h-16 items-center justify-between">
-          <Link href="/" className="text-xl font-bold hover:text-primary transition-colors">
-            {personalInfo.name}
-          </Link>
-          <div className="flex items-center gap-4">
-            <nav className="hidden md:flex items-center gap-1">
-              <Link href="/experience" className="px-3 py-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-smooth rounded-md hover:bg-muted/50">
-                Experience
-              </Link>
-              <Link href="/projects" className="px-3 py-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-smooth rounded-md hover:bg-muted/50">
-                Projects
-              </Link>
-              <Link href="/achievements" className="px-3 py-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-smooth rounded-md hover:bg-muted/50">
-                Achievements
-              </Link>
-              <Link href="/certifications" className="px-3 py-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-smooth rounded-md hover:bg-muted/50">
-                Certifications
-              </Link>
-              <Link href="/education" className="px-3 py-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-smooth rounded-md hover:bg-muted/50">
-                Education
-              </Link>
-            </nav>
-            <ModeToggle />
-          </div>
-        </div>
-      </header>
 
       <main className="container relative z-10">
         {/* Hero Section */}
@@ -68,7 +39,21 @@ export default function Home() {
             <h1 className="text-5xl md:text-7xl font-bold mb-4">
               {personalInfo.name}
             </h1>
-            <p className="text-xl md:text-2xl text-muted-foreground mb-2">{personalInfo.title}</p>
+            <p className="text-xl md:text-2xl text-muted-foreground mb-3">{personalInfo.title}</p>
+            <div className="flex flex-wrap gap-2 justify-center mb-4">
+              <Badge variant="outline" className="text-xs px-3 py-1 border-primary/30 text-primary">
+                <Zap className="h-3 w-3 mr-1" /> n8n
+              </Badge>
+              <Badge variant="outline" className="text-xs px-3 py-1 border-primary/30 text-primary">
+                <Bot className="h-3 w-3 mr-1" /> UiPath
+              </Badge>
+              <Badge variant="outline" className="text-xs px-3 py-1 border-primary/30 text-primary">
+                <Code className="h-3 w-3 mr-1" /> React
+              </Badge>
+              <Badge variant="outline" className="text-xs px-3 py-1 border-primary/30 text-primary">
+                <Workflow className="h-3 w-3 mr-1" /> RPA
+              </Badge>
+            </div>
             <p className="text-muted-foreground max-w-2xl mx-auto mb-8">{personalInfo.bio}</p>
           </div>
 
@@ -161,7 +146,7 @@ export default function Home() {
         </section>
 
         {/* Quick Stats / Highlights */}
-        <section className="grid md:grid-cols-3 lg:grid-cols-4 gap-6 mb-20">
+        <section className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6 mb-20">
           <Link href="/experience" className="group">
             <div className="glass-card dark:glass-card-dark p-6 rounded-2xl hover:scale-105 transition-smooth cursor-pointer h-full">
               <Briefcase className="h-8 w-8 text-primary mb-4" />
@@ -363,7 +348,7 @@ export default function Home() {
               <h2 className="text-3xl font-bold">Get in Touch</h2>
             </div>
             <p className="text-muted-foreground text-lg max-w-2xl">
-              I'm always open to discussing new opportunities, interesting projects, or just having a conversation about technology and automation.
+              Looking to automate your business processes or need a production-grade automation system? Let's connect and discuss how I can help.
             </p>
           </div>
 
